@@ -1,15 +1,24 @@
 {
-  "name": "vite-react-17",
+  "name": "vite-reason-react",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "dev-watch": "run-p build-watch-res dev-vite",
+    "dev": "run-s clean-res build-res dev-watch",
+    "dev-vite": "vite",
+    "build-vite": "vite build",
+    "build-tsc": "tsc",
+    "build-res": "bsb -make-world",
+    "clean-res": "bsb -clean-world",
+    "build-watch-res": "bsb -make-world -w"
   },
   "dependencies": {
     "react": "npm:@esm-bundle/react@^17.0.1",
-    "react-dom": "npm:@esm-bundle/react-dom@^17.0.1"
+    "react-dom": "npm:@esm-bundle/react-dom@^17.0.1",
+    "reason-react": "^0.9.1"
   },
   "devDependencies": {
+    "bs-platform": "^8.3.2",
+    "npm-run-all": "^4.1.5",
     "vite": "^1.0.0-rc.9",
     "vite-plugin-react": "^3.0.0"
   }
