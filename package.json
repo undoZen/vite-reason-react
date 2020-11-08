@@ -1,0 +1,16 @@
+{
+  "name": "vite-react-17",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "npm:@esm-bundle/react@^17.0.1",
+    "react-dom": "npm:@esm-bundle/react-dom@^17.0.1"
+  },
+  "devDependencies": {
+    "vite": "^1.0.0-rc.9",
+    "vite-plugin-react": "^3.0.0"
+  }
+}
